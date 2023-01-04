@@ -4,7 +4,7 @@ from tkinter import messagebox
 
 import mysql.connector
 class log:
-    def _init_(self):
+    def __init__(self):
         pass
     def mainn(self):
         global window
@@ -19,7 +19,7 @@ class log:
         window.mainloop()
 
     def connection(self,user, passw):
-        conn = mysql.connector.connect(host='localhost', user='root', password='password', port=3306, db='hcl')
+        conn = mysql.connector.connect(host='localhost', user='root', password='Password@1', port=3306, db='hcl')
         query = "select id from login where username =%s and password =%s"
         vals = (user, passw)
         cur = conn.cursor(prepared=True)
@@ -65,7 +65,7 @@ class log:
         root.mainloop()
 
     def connection1(self,user, passw):
-        conn = mysql.connector.connect(host='localhost', user='root', password='password', port=3306, db='hcl')
+        conn = mysql.connector.connect(host='localhost', user='root', password='Password@1', port=3306, db='hcl')
         query = "select username from login where username like'%{0}'".format(user, )
         cur = conn.cursor(prepared=True)
         cur.execute(query)
@@ -147,7 +147,7 @@ class log:
         search.set("")
 
         def my_details(id):
-            conn = mysql.connector.connect(host='localhost', user='root', password='password', port=3306, db='hcl')
+            conn = mysql.connector.connect(host='localhost', user='root', password='Password@1', port=3306, db='hcl')
             cur1= conn.cursor()
             try:
                 val = int(id)  # check input is integer or not
