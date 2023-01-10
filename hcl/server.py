@@ -6,5 +6,5 @@ while True:
     client, address = sk.accept()
     print("Connection Established")
     print(address)
-    client.send(b"socket Programming")
+    client.send(b"socket Programming is connected")
 

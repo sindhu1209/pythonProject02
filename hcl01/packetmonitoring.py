@@ -31,6 +31,6 @@ while True:
                  })
     df=pd.DataFrame(data)
     time.sleep(1)
-    sns.lineplot(data=df)
-    plt.show()
+    #sns.lineplot(data=df)
+    #plt.show()
     print(df)
